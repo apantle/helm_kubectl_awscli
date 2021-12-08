@@ -25,12 +25,12 @@ Check the How to comparison next if you are not sure:
 ## How to comparison (use in a pipeline)
 
 ### Using this image
-> tezcatl/helm_kubectl_awscli
+> ghcr.io/apantle/helm_kubectl_awscli
 
 ```yaml
 - step: build-and-push
   name: Build and Push to ECR
-  image: tezcatl/helm_kubectl_awscli:v1
+  image: ghcr.io/apantle/helm_kubectl_awscli:v1
   script:
     - AWS_CLIENT_ID="${AWS_CLIENT_ID}" AWS_CLIENT_SECRET="${AWS_CLIENT_SECRET}" AWS_REGION=us-east-2 source $BASH_ENV
     # Don't use eval aws ecr get-login < is deprecated
@@ -69,7 +69,7 @@ you get the same binaries installed and ready to go (see the Dockerfile).
 ### Local test of your commands
 
 ```bash
-docker run --rm -it tezcatl/helm_kubectl_awscli \
+docker run --rm -it ghcr.io/apantle/helm_kubectl_awscli \
 --env AWS_CLIENT_ID=K7VQSZQBRA0CKMSQ1VM4 \
 --env AWS_CLIENT_SECRET=KXJSPoIf6b9bdEmZsW6Qj4gJRRCaTYXmYcfgdDCH \
 --env AWS_REGION=us-east-2 bash -c 'aws ecr get-login-password'
