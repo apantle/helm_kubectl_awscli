@@ -1,5 +1,6 @@
 FROM dtzar/helm-kubectl:3.7.1
 LABEL org.opencontainers.image.authors="jesus@levo.mx"
+LABEL org.opencontainers.image.source="https://github.com/apantle/helm_kubectl_awscli"
 LABEL version=1.0
 LABEL description="Alpine with Helm, Kubectl and AWS cli integrated to script"
 
