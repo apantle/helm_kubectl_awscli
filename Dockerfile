@@ -1,4 +1,4 @@
-FROM dtzar/helm-kubectl:3.7.1
+FROM dtzar/helm-kubectl:3.14.3
 LABEL org.opencontainers.image.authors="jesus@levo.mx"
 LABEL org.opencontainers.image.source="https://github.com/apantle/helm_kubectl_awscli"
 LABEL version=1.0
